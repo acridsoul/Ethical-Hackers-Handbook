@@ -1,2 +1,2 @@
-# Ethical-Hacker-s-Handbook
+# Ethical-Hackers-Handbook
 Building in public
