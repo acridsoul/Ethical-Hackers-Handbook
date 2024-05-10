@@ -1,0 +1,18 @@
+- A buffer is a region of physical memory storage used to temporarily store data while it is being moved from one place to another.
+- A buffer overflow attack is a type of cybersecurity exploit where an attacker overflows a buffer (a temporary storage area in a computer's memory) with more data than it can hold. 
+- This overflow can overwrite adjacent memory locations, which can lead to various malicious outcomes, including:
+    1. Code Execution: By overwriting the return address of a function with the address of malicious code, an attacker can execute arbitrary code on the target system. This is one of the most dangerous types of buffer overflow attacks.
+    2. Information Disclosure: Overwriting the memory of other programs or system processes can lead to the disclosure of sensitive information, such as passwords or encryption keys.
+    3. Denial of Service (DoS): By causing a program to crash or become unresponsive due to corrupted memory, an attacker can disrupt the service provided by the program.
+    4. Privilege Escalation: If the overwritten memory belongs to a privileged process or user, the attacker might gain elevated privileges on the system.
+    5. Data Corruption: The excess data can overwrite adjacent memory locations, potentially corrupting data stored there.
+    6. Program Crashes: If the overflow affects critical program data or code, it can cause the program to crash.
+
+
+### How Buffer Overflow Attacks Work
+- Buffer overflow attacks typically occur when a program writes more data to a buffer than it can hold. This can happen due to several reasons:
+    1. Incorrectly Calculated Buffer Sizes: If the program does not correctly calculate the size of the data being written to a buffer, it might write beyond the allocated space.
+    2. Lack of Input Validation: If the program does not validate or sanitize user input, an attacker can provide input that exceeds the buffer size.
+    3. Insecure Coding Practices: Using functions that do not check the size of the destination buffer, such as strcpy without a maximum length, can lead to buffer overflow vulnerabilities.
+
+- Buffer overflow attacks are a significant security concern, especially for systems running critical infrastructure or handling sensitive data.
