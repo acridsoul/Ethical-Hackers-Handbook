@@ -4,4 +4,8 @@
 - 8 bits equals a `byte` which can represent `0 - 255 in decimal` or `0 to (2^8 - 1)`
 - When we put two `bytes` together we get a `word` which is `0 - 65,535 in decimal` 0r `0 to (2^16 - 1)`
 - The size of a word can vary depending on the architecture of the computer system, but it is commonly 4 bytes (32 bits) on many modern systems,    especially those based on the x86 architecture.
+- 2 `words` form a double word or `DWORD` which is `0 - 4,294,967,295 in decimal` 0r `0 to (2^32 - 1)`
+- 2 `DWORDS` form a quadruple word or `QWORD` which is `0 - 18,446,744,073,709,551,615 in decimal` 0r `0 to (2^64 - 1)`
 
+- There are many types of computer memory;
+- We shall focus on Random Access Memory(RAM) and Registers. (pg 95)
