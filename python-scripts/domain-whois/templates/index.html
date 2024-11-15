@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Domain WHOIS Lookup</title>
+    <style>
+        body { font-family: Arial; max-width: 800px; margin: 0 auto; padding: 20px; }
+        .form-container { margin: 20px 0; }
+        input[type="text"] { padding: 8px; width: 300px; }
+        button { padding: 8px 20px; }
+        .result { margin-top: 20px; }
+        .error { color: red; }
+    </style>
+</head>
+<body>
+    <h1>Domain WHOIS Lookup</h1>
+    <div class="form-container">
+        <form method="POST">
+            <input type="text" name="domain" placeholder="Enter domain name" required>
+            <button type="submit">Lookup</button>
+        </form>
+    </div>
+    {% if result %}
+        <div class="result">
+            {% if result.error %}
+                <p class="error">{{ result.error }}</p>
+            {% else %}
+                <h2>Results for {{ result.domain }}</h2>
+                <p><strong>Registrar:</strong> {{ result.registrar }}</p>
+                <p><strong>WHOIS Server:</strong> {{ result.whois_server }}</p>
+                <p><strong>Creation Date:</strong> {{ result.creation_date }}</p>
+                <p><strong>Expiration Date:</strong> {{ result.expiration_date }}</p>
+                <p><strong>Name Servers:</strong> {{ result.name_servers }}</p>
+            {% endif %}
+        </div>
+    {% endif %}
+</body>
+</html>
